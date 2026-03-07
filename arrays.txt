@@ -1,0 +1,70 @@
+--------------------------------------------------Max Element in array------------------------------------------------------------
+let arr=[65,23,53,78];
+function maxElement(arr){
+    let max=-Infinity;
+    for(let i=0;i<arr.length;i++){
+        // console.log(arr[i])
+        if(arr[i]>max){
+            max=arr[i];
+        }
+    }
+    return max;
+}
+console.log(maxElement(arr));
+-----------------------------------------------Min Element in array-------------------------------------------------------------
+let arr=[12,32,24,11];
+function minElement(arr){
+    let min=+Infinity;
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]<min){
+            min=arr[i]
+        }
+    }
+    return min;
+}
+console.log(minElement(arr))
+-------------------------------------------------Second Largest number---------------------------------------------------------
+ let arr=[10,80,11,8,9,2];
+ function secondLargestNumber(arr){
+     let first=-Infinity;
+     let second=-Infinity;
+     for(let i=0;i<arr.length;i++){
+         if(arr[i]>first ){
+             second=first;
+             first=arr[i]
+         }
+         else if(arr[i]>second && arr[i]!=first){
+             second=arr[i];
+         }
+     }
+     return second;
+     
+ }
+ console.log(secondLargestNumber(arr));
+-----------------------------------------Sum of Array------------------------------------------------------------------
+let arr=[2,4,6,8,10];
+function sumArray(arr){
+    let sum=0;
+    for(let i=0;i<arr.length;i++){
+        sum+=arr[i];
+    }
+    return sum;
+}
+console.log(sumArray(arr));
+----------------------------------------finding sum of evennumbers from array and checking if that sum value is odd then return true else false----
+let arr=[2,4,6,8,11];
+function sumArray(arr){
+    let sum=0;
+    for(let i=0;i<arr.length;i++){
+        // sum+=arr[i];
+        if(arr[i]%2==0){
+            sum+=arr[i];
+        }
+        if(sum%2!==0){
+            return true;
+        }
+        return false;
+    }
+    // return sum;
+}
+console.log(sumArray(arr));
