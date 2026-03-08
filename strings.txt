@@ -1,0 +1,79 @@
+---------------------------------------------------------------Stringss------------------------------------------
+--------------------------------------------------------------------String Length using for of a loop----------------------
+
+function strlen(str){
+    let count=0
+    for(let char of str){
+        count++
+    }
+    return count;
+}
+console.log(strlen("sumi"));
+--------------------------------------------------------------------Reverse a String without bulit in methods--------
+
+T.C=O(N);
+S.C=O(N);
+
+function reverseString(str){
+    let reverse="";
+    for(let i=str.length-1;i>=0;i--){
+        reverse+=str[i];
+    }
+    return reverse;
+}
+console.log(reverseString("varsha"));
+---------------------------Palindrome-----------------------------------
+
+function isPalindrome(str){
+    let palindrome=""
+    for(let i=str.length-1;i>=0;i--){
+        palindrome+=str[i];
+    }
+    if(str===palindrome){
+        return true;
+    }
+    return false;
+}
+console.log(isPalindrome("rama"));
+
+Why it works
+You reverse the string
+1.Compare original string with reversed string
+2.If both are same → palindrome
+Time Complexity: O(n)
+Space Complexity: O(n) (because you create a new string)
+---------------------------------------------------------count frequency of each character------------
+
+function freqCount(str){
+    let obj={};
+    for(let i=0;i<str.length;i++){
+        if(obj[str[i]]){
+            obj[str[i]]++
+        }
+        else{
+            obj[str[i]]=1;
+        }
+    }
+    return obj;
+}
+console.log(freqCount("program"));
+
+Why it works?
+✔ Uses object as hashmap
+✔ Single loop → O(n) time complexity
+-------------------------------------Remove Duplicate Characters From String using object {} -----------------------------------
+
+
+function removeDuplicates(str){
+    let res="";
+    let obj={};
+    for(let i=0;i<str.length;i++){
+        if(!obj[str[i]]){
+            res+=str[i];
+            // console.log(res)
+            obj[str[i]]=1;
+        }
+    }
+    return res
+}
+console.log(removeDuplicates("programming"))
